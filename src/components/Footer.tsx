@@ -1,5 +1,6 @@
 
 import { useLanguage } from "@/context/LanguageContext";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -14,13 +15,23 @@ export default function Footer() {
             <p className="text-gray-600 mb-4">
               {t('home.aboutText')}
             </p>
+            <div className="flex mt-4">
+              <a 
+                href="https://www.instagram.com/muscle.eatz.rs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
           <div>
             <h4 className="font-bold text-lg mb-4">{t('footer.contact')}</h4>
             <address className="not-italic">
               <p className="mb-2">{t('footer.address')}</p>
-              <p className="mb-2">{t('footer.phone')}</p>
-              <p className="mb-2">{t('footer.email')}</p>
+              <p className="mb-2">Tel: 0603187333</p>
+              <p className="mb-2">Email: muscleatz@gmail.com</p>
             </address>
           </div>
         </div>

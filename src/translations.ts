@@ -64,12 +64,24 @@ export const translations = {
       selectMenu: 'Izaberite meni',
       orderNote: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
     },
+    contact: {
+      title: 'Kontakt informacije',
+      selectedMenu: 'Izabrani meni',
+      name: 'Ime i prezime',
+      email: 'Email adresa',
+      phone: 'Broj telefona',
+      address: 'Adresa za dostavu',
+      submit: 'Potvrdite porudžbinu',
+      submitting: 'Slanje...',
+      success: 'Uspešno',
+      orderConfirmed: 'Vaša porudžbina je primljena. Uskoro ćemo vas kontaktirati.'
+    },
     footer: {
       rights: 'Sva prava zadržana',
       contact: 'Kontakt',
       address: 'Adresa: Bulevar oslobođenja 123, Beograd',
-      phone: 'Telefon: +381 11 123 4567',
-      email: 'Email: info@muscleeatz.rs'
+      phone: 'Telefon: 0603187333',
+      email: 'Email: muscleatz@gmail.com'
     }
   },
   en: {
@@ -134,12 +146,24 @@ export const translations = {
       selectMenu: 'Select Menu',
       orderNote: 'We accept orders from Monday to Saturday for the following week.',
     },
+    contact: {
+      title: 'Contact Information',
+      selectedMenu: 'Selected Menu',
+      name: 'Full Name',
+      email: 'Email Address',
+      phone: 'Phone Number',
+      address: 'Delivery Address',
+      submit: 'Confirm Order',
+      submitting: 'Sending...',
+      success: 'Success',
+      orderConfirmed: 'Your order has been received. We will contact you shortly.'
+    },
     footer: {
       rights: 'All Rights Reserved',
       contact: 'Contact',
       address: 'Address: 123 Liberation Boulevard, Belgrade',
-      phone: 'Phone: +381 11 123 4567',
-      email: 'Email: info@muscleeatz.rs'
+      phone: 'Phone: 0603187333',
+      email: 'Email: muscleatz@gmail.com'
     }
   }
 };

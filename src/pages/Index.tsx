@@ -4,10 +4,16 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useRef } from "react";
 
 const Index = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const menuSectionRef = useRef<HTMLElement>(null);
+
+  const scrollToMenus = () => {
+    menuSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,13 +27,22 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('home.title')}</h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-700">{t('home.subtitle')}</p>
               <p className="text-lg md:text-xl mb-8 text-gray-700">{t('home.heroText')}</p>
-              <Button 
-                onClick={() => navigate('/order')}
-                className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
-                size="lg"
-              >
-                {t('home.orderCta')}
-              </Button>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button 
+                  onClick={() => navigate('/order')}
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
+                  size="lg"
+                >
+                  {t('home.orderCta')}
+                </Button>
+                <Button 
+                  onClick={scrollToMenus}
+                  className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6"
+                  size="lg"
+                >
+                  {t('common.menus')}
+                </Button>
+              </div>
               <p className="mt-4 text-gray-600">{t('home.orderInfo')}</p>
             </div>
           </div>
@@ -64,6 +79,75 @@ const Index = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.nutrition.title')}</h3>
                 <p className="text-gray-700">{t('home.features.nutrition.description')}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Menu Section */}
+        <section ref={menuSectionRef} className="py-16 bg-white" id="menus">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center">{t('order.title')}</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.mensLarge.title')}</h3>
+                <p className="text-gray-500 mb-2">{t('order.mensLarge.calories')}</p>
+                <p className="text-gray-700 mb-4">{t('order.mensLarge.description')}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold text-primary">{t('order.mensLarge.price')}</span>
+                  <Button 
+                    onClick={() => navigate('/order')}
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.mensSmall.title')}</h3>
+                <p className="text-gray-500 mb-2">{t('order.mensSmall.calories')}</p>
+                <p className="text-gray-700 mb-4">{t('order.mensSmall.description')}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold text-primary">{t('order.mensSmall.price')}</span>
+                  <Button 
+                    onClick={() => navigate('/order')}
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.womensLarge.title')}</h3>
+                <p className="text-gray-500 mb-2">{t('order.womensLarge.calories')}</p>
+                <p className="text-gray-700 mb-4">{t('order.womensLarge.description')}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold text-primary">{t('order.womensLarge.price')}</span>
+                  <Button 
+                    onClick={() => navigate('/order')}
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.womensSmall.title')}</h3>
+                <p className="text-gray-500 mb-2">{t('order.womensSmall.calories')}</p>
+                <p className="text-gray-700 mb-4">{t('order.womensSmall.description')}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold text-primary">{t('order.womensSmall.price')}</span>
+                  <Button 
+                    onClick={() => navigate('/order')}
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

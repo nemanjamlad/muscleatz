@@ -2,18 +2,16 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const OrderPage = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const handleSelectMenu = (menuName: string) => {
-    toast({
-      title: "Uspešno",
-      description: `Izabrali ste ${menuName}. Uskoro će vam stići email sa detaljima.`,
-    });
+    navigate("/contact", { state: { selectedMenu: menuName } });
   };
 
   return (
