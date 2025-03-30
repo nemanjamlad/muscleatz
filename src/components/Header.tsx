@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="text-2xl font-bold text-primary">
-            MuscleEatz
+            MusclEatz
           </a>
         </div>
 
@@ -30,6 +30,9 @@ export default function Header() {
           </a>
           <a href="/order" className="font-medium hover:text-primary transition-colors">
             {t('common.menus')}
+          </a>
+          <a href="/jelovnik" className="font-medium hover:text-primary transition-colors">
+            {t('common.jelovnik')}
           </a>
           <button 
             onClick={toggleLanguage}
@@ -86,6 +89,13 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('common.menus')}
+            </a>
+            <a 
+              href="/jelovnik" 
+              className="font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('common.jelovnik')}
             </a>
           </nav>
         </div>

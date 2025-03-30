@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-primary mb-4">MuscleEatz</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">MusclEatz</h3>
             <p className="text-gray-600 mb-4">
               {t('home.aboutText')}
             </p>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-          <p>&copy; {currentYear} MuscleEatz. {t('footer.rights')}</p>
+          <p>&copy; {currentYear} MusclEatz. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

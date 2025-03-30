@@ -8,17 +8,18 @@ export const translations = {
       language: 'EN',
       home: 'Početna',
       menus: 'Meniji',
+      jelovnik: 'Jelovnik',
       contact: 'Kontakt',
     },
     home: {
-      title: 'MuscleEatz',
+      title: 'MusclEatz',
       subtitle: 'Zdrava hrana za zdrav život',
       heroText: '7 dana nedeljno donosimo obroke na vašu adresu',
       orderCta: 'Poručite odmah',
       aboutUs: 'O nama',
-      aboutText: 'MuscleEatz je premium servis za dostavu zdrave, sveže pripremljene hrane koja je kreirana da ispuni sve vaše nutritivne potrebe.',
+      aboutText: 'MusclEatz je premium servis za dostavu zdrave, sveže pripremljene hrane koja je kreirana da ispuni sve vaše nutritivne potrebe.',
       features: {
-        title: 'Zašto MuscleEatz?',
+        title: 'Zašto MusclEatz?',
         freshFood: {
           title: 'Sveže pripremljeni obroci',
           description: 'Naši obroci su pripremljeni od najkvalitetnijih sastojaka i dostavljeni sveži.'
@@ -65,6 +66,13 @@ export const translations = {
       orderNote: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
       deliveryTime: 'Hrana stiže na vašu adresu od 7 do 10 ujutru.'
     },
+    jelovnik: {
+      title: 'Jelovnik',
+      subtitle: 'Pogledajte naš aktuelni jelovnik',
+      uploadButton: 'Otpremite jelovnik',
+      clickToEnlarge: 'Kliknite na sliku da je uvećate',
+      noMenu: 'Trenutno nema dostupnog jelovnika',
+    },
     contact: {
       title: 'Kontakt informacije',
       selectedMenu: 'Izabrani meni',
@@ -92,17 +100,18 @@ export const translations = {
       language: 'SR',
       home: 'Home',
       menus: 'Menus',
+      jelovnik: 'Menu Card',
       contact: 'Contact',
     },
     home: {
-      title: 'MuscleEatz',
+      title: 'MusclEatz',
       subtitle: 'Healthy Food for Healthy Life',
       heroText: 'We deliver meals to your address 7 days a week',
       orderCta: 'Order Now',
       aboutUs: 'About Us',
-      aboutText: 'MuscleEatz is a premium meal delivery service with fresh, healthy food created to fulfill all your nutritional needs.',
+      aboutText: 'MusclEatz is a premium meal delivery service with fresh, healthy food created to fulfill all your nutritional needs.',
       features: {
-        title: 'Why MuscleEatz?',
+        title: 'Why MusclEatz?',
         freshFood: {
           title: 'Freshly Prepared Meals',
           description: 'Our meals are prepared from the highest quality ingredients and delivered fresh.'
@@ -148,6 +157,13 @@ export const translations = {
       selectMenu: 'Select Menu',
       orderNote: 'We accept orders from Monday to Saturday for the following week.',
       deliveryTime: 'Food is delivered to your address between 7 and 10 AM.'
+    },
+    jelovnik: {
+      title: 'Menu Card',
+      subtitle: 'Check our current menu',
+      uploadButton: 'Upload Menu',
+      clickToEnlarge: 'Click on the image to enlarge',
+      noMenu: 'No menu currently available',
     },
     contact: {
       title: 'Contact Information',
