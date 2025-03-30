@@ -9,11 +9,6 @@ import { useRef } from "react";
 const Index = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const menuSectionRef = useRef<HTMLElement>(null);
-
-  const scrollToMenus = () => {
-    menuSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,7 +16,7 @@ const Index = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-50 to-green-100 py-20">
+        <section id="hero" className="relative bg-gradient-to-br from-green-50 to-green-100 py-20">
           <div className="container mx-auto px-4 py-12 md:py-20">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('home.title')}</h1>
@@ -36,7 +31,9 @@ const Index = () => {
                   {t('home.orderCta')}
                 </Button>
                 <Button 
-                  onClick={scrollToMenus}
+                  onClick={() => {
+                    document.getElementById('menus')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6"
                   size="lg"
                 >
@@ -49,7 +46,7 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-16 bg-white">
+        <section id="about" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-center">{t('home.aboutUs')}</h2>
@@ -61,7 +58,7 @@ const Index = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-gray-50">
+        <section id="features" className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">{t('home.features.title')}</h2>
             
@@ -85,7 +82,7 @@ const Index = () => {
         </section>
 
         {/* Menu Section */}
-        <section ref={menuSectionRef} className="py-16 bg-white" id="menus">
+        <section id="menus" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">{t('order.title')}</h2>
             

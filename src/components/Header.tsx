@@ -1,7 +1,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
@@ -9,9 +9,29 @@ export default function Header() {
   const { t, changeLanguage, locale } = useLanguage();
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleLanguage = () => {
     changeLanguage(locale === 'sr' ? 'en' : 'sr');
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Allow time for navigation before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if (mobileMenuOpen) setMobileMenuOpen(false);
   };
 
   return (
@@ -25,12 +45,30 @@ export default function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="/" className="font-medium hover:text-primary transition-colors">
+          <button 
+            onClick={() => scrollToSection('hero')}
+            className="font-medium hover:text-primary transition-colors"
+          >
             {t('common.home')}
-          </a>
-          <a href="/order" className="font-medium hover:text-primary transition-colors">
+          </button>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="font-medium hover:text-primary transition-colors"
+          >
+            {t('common.about')}
+          </button>
+          <button 
+            onClick={() => scrollToSection('features')}
+            className="font-medium hover:text-primary transition-colors"
+          >
+            {t('common.features')}
+          </button>
+          <button 
+            onClick={() => scrollToSection('menus')}
+            className="font-medium hover:text-primary transition-colors"
+          >
             {t('common.menus')}
-          </a>
+          </button>
           <a href="/jelovnik" className="font-medium hover:text-primary transition-colors">
             {t('common.jelovnik')}
           </a>
@@ -76,24 +114,33 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background p-4 border-b">
           <nav className="flex flex-col space-y-4">
-            <a 
-              href="/" 
+            <button 
+              onClick={() => scrollToSection('hero')}
               className="font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
             >
               {t('common.home')}
-            </a>
-            <a 
-              href="/order" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
               className="font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('common.about')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="font-medium hover:text-primary transition-colors"
+            >
+              {t('common.features')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('menus')}
+              className="font-medium hover:text-primary transition-colors"
             >
               {t('common.menus')}
-            </a>
+            </button>
             <a 
-              href="/jelovnik" 
+              href="/jelovnik"
               className="font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
             >
               {t('common.jelovnik')}
             </a>
