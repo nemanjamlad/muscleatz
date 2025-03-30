@@ -25,7 +25,7 @@ export const translations = {
         },
         delivery: {
           title: 'Dostava na adresu',
-          description: '7 dana nedeljno dostavljamo hranu na vašu adresu.'
+          description: '7 dana nedeljno dostavljamo hranu na vašu adresu od 7 do 10 ujutru.'
         },
         nutrition: {
           title: 'Nutritivno izbalansirano',
@@ -63,6 +63,7 @@ export const translations = {
       },
       selectMenu: 'Izaberite meni',
       orderNote: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
+      deliveryTime: 'Hrana stiže na vašu adresu od 7 do 10 ujutru.'
     },
     contact: {
       title: 'Kontakt informacije',
@@ -71,6 +72,7 @@ export const translations = {
       email: 'Email adresa',
       phone: 'Broj telefona',
       address: 'Adresa za dostavu',
+      deliveryTime: 'Hrana stiže na vašu adresu od 7 do 10 ujutru.',
       submit: 'Potvrdite porudžbinu',
       submitting: 'Slanje...',
       success: 'Uspešno',
@@ -107,7 +109,7 @@ export const translations = {
         },
         delivery: {
           title: 'Home Delivery',
-          description: 'We deliver food to your address 7 days a week.'
+          description: 'We deliver food to your address 7 days a week between 7 and 10 AM.'
         },
         nutrition: {
           title: 'Nutritionally Balanced',
@@ -145,6 +147,7 @@ export const translations = {
       },
       selectMenu: 'Select Menu',
       orderNote: 'We accept orders from Monday to Saturday for the following week.',
+      deliveryTime: 'Food is delivered to your address between 7 and 10 AM.'
     },
     contact: {
       title: 'Contact Information',
@@ -153,6 +156,7 @@ export const translations = {
       email: 'Email Address',
       phone: 'Phone Number',
       address: 'Delivery Address',
+      deliveryTime: 'Food is delivered to your address between 7 and 10 AM.',
       submit: 'Confirm Order',
       submitting: 'Sending...',
       success: 'Success',

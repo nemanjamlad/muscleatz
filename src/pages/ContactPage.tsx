@@ -22,6 +22,9 @@ const ContactPage = () => {
       <main className="flex-grow bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-xl mx-auto">
+            <div className="bg-amber-50 p-4 rounded-md mb-4 border border-amber-200">
+              <p className="text-amber-800 text-center">{t('contact.deliveryTime')}</p>
+            </div>
             <ContactForm selectedMenu={selectedMenu} />
           </div>
         </div>
