@@ -76,6 +76,16 @@ const Index = () => {
                 <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.nutrition.title')}</h3>
                 <p className="text-gray-700">{t('home.features.nutrition.description')}</p>
               </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.chefs.title')}</h3>
+                <p className="text-gray-700">{t('home.features.chefs.description')}</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.experts.title')}</h3>
+                <p className="text-gray-700">{t('home.features.experts.description')}</p>
+              </div>
             </div>
           </div>
         </section>

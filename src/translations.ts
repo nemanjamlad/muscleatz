@@ -1,3 +1,4 @@
+
 export type Locale = 'sr' | 'en';
 
 export const translations = {
@@ -32,6 +33,14 @@ export const translations = {
         nutrition: {
           title: 'Nutritivno izbalansirano',
           description: 'Svaki obrok je kreiran da zadovolji vaše nutritivne potrebe.'
+        },
+        chefs: {
+          title: 'Vrhunski kuvari',
+          description: 'Našu hranu pripremaju vrhunski kuvari sa dugogodišnjim iskustvom.'
+        },
+        experts: {
+          title: 'Stručni tim',
+          description: 'Menije osmišljavaju stručni nutricionisti u saradnji sa iskusnim trenerima.'
         }
       },
       orderInfo: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
@@ -132,6 +141,14 @@ export const translations = {
         nutrition: {
           title: 'Nutritionally Balanced',
           description: 'Each meal is designed to meet your nutritional needs.'
+        },
+        chefs: {
+          title: 'Top Chefs',
+          description: 'Our food is prepared by top chefs with years of experience.'
+        },
+        experts: {
+          title: 'Expert Team',
+          description: 'Menus are created by professional nutritionists in collaboration with experienced trainers.'
         }
       },
       orderInfo: 'We accept orders from Monday to Saturday for the following week.',

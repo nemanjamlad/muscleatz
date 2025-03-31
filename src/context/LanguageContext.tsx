@@ -4,7 +4,7 @@ import { translations, Locale } from '../translations';
 
 type LanguageContextType = {
   locale: Locale;
-  t: (key: string) => string;
+  t: (key: string, options?: { returnObjects?: boolean }) => any;
   changeLanguage: (locale: Locale) => void;
 };
 
@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('sr');
 
-  const t = (key: string): string => {
+  const t = (key: string, options?: { returnObjects?: boolean }): any => {
     const keys = key.split('.');
     let translation: any = translations[locale];
     
@@ -22,7 +22,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       translation = translation[k];
     }
     
-    return translation;
+    return options?.returnObjects ? translation : String(translation);
   };
 
   const changeLanguage = (newLocale: Locale) => {
