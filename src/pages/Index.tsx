@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useRef } from "react";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -81,8 +80,27 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Order Instructions Section */}
+        <section id="order-instructions" className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">{t('home.orderInstructions')}</h2>
+              <ul className="space-y-4">
+                {t('home.orderSteps', { returnObjects: true }).map((step: string, index: number) => (
+                  <li key={index} className="flex items-start">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3">
+                      {index + 1}
+                    </span>
+                    <p className="text-lg text-gray-700">{step}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Menu Section */}
-        <section id="menus" className="py-16 bg-white">
+        <section id="menus" className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">{t('order.title')}</h2>
             
