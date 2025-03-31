@@ -10,8 +10,12 @@ export default function Footer() {
     <footer className="bg-gray-100 border-t">
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-4">MusclEatz</h3>
+          <div className="flex flex-col items-start">
+            <img 
+              src="/logo.png" 
+              alt="MusclEatz Logo" 
+              className="h-16 mb-4" 
+            />
             <p className="text-gray-600 mb-4">
               {t('home.aboutText')}
             </p>
@@ -20,7 +24,7 @@ export default function Footer() {
                 href="https://www.instagram.com/muscle.eatz.rs" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 <Instagram size={24} />
               </a>

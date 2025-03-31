@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -18,7 +17,6 @@ export default function Header() {
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
       navigate('/');
-      // Allow time for navigation before scrolling
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -36,15 +34,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold text-primary">
-            MusclEatz
+          <a href="/" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="MusclEatz Logo" 
+              className="h-14 md:h-16"
+            />
           </a>
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <button 
             onClick={() => scrollToSection('hero')}
             className="font-medium hover:text-primary transition-colors"
@@ -80,7 +82,7 @@ export default function Header() {
           </button>
           <Button 
             onClick={() => navigate('/order')}
-            className="bg-primary hover:bg-primary/90 text-white"
+            className="bg-black hover:bg-black/90 text-white"
           >
             {t('common.orderNow')}
           </Button>
@@ -96,7 +98,7 @@ export default function Header() {
           </button>
           <Button 
             onClick={() => navigate('/order')}
-            className="bg-primary hover:bg-primary/90 text-white"
+            className="bg-black hover:bg-black/90 text-white"
             size="sm"
           >
             {t('common.orderNow')}

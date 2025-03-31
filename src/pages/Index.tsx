@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -15,16 +14,21 @@ const Index = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section id="hero" className="relative bg-gradient-to-br from-green-50 to-green-100 py-20">
+        <section id="hero" className="relative bg-gradient-to-br from-gray-50 to-gray-100 py-20">
           <div className="container mx-auto px-4 py-12 md:py-20">
             <div className="max-w-3xl mx-auto text-center">
+              <img 
+                src="/logo.png" 
+                alt="MusclEatz Logo" 
+                className="h-32 md:h-40 mx-auto mb-8" 
+              />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('home.title')}</h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-700">{t('home.subtitle')}</p>
               <p className="text-lg md:text-xl mb-8 text-gray-700">{t('home.heroText')}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
                   onClick={() => navigate('/order')}
-                  className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6"
+                  className="bg-black hover:bg-black/90 text-white text-lg px-8 py-6"
                   size="lg"
                 >
                   {t('home.orderCta')}
@@ -33,7 +37,7 @@ const Index = () => {
                   onClick={() => {
                     document.getElementById('menus')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="bg-secondary hover:bg-secondary/90 text-white text-lg px-8 py-6"
+                  className="bg-gray-700 hover:bg-gray-800 text-white text-lg px-8 py-6"
                   size="lg"
                 >
                   {t('common.menus')}
@@ -63,27 +67,27 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.freshFood.title')}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{t('home.features.freshFood.title')}</h3>
                 <p className="text-gray-700">{t('home.features.freshFood.description')}</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.delivery.title')}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{t('home.features.delivery.title')}</h3>
                 <p className="text-gray-700">{t('home.features.delivery.description')}</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.nutrition.title')}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{t('home.features.nutrition.title')}</h3>
                 <p className="text-gray-700">{t('home.features.nutrition.description')}</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.chefs.title')}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{t('home.features.chefs.title')}</h3>
                 <p className="text-gray-700">{t('home.features.chefs.description')}</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-primary">{t('home.features.experts.title')}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{t('home.features.experts.title')}</h3>
                 <p className="text-gray-700">{t('home.features.experts.description')}</p>
               </div>
             </div>
@@ -98,7 +102,7 @@ const Index = () => {
               <ul className="space-y-4">
                 {t('home.orderSteps', { returnObjects: true }).map((step: string, index: number) => (
                   <li key={index} className="flex items-start">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center mr-3">
                       {index + 1}
                     </span>
                     <p className="text-lg text-gray-700">{step}</p>
@@ -116,14 +120,14 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.mensLarge.title')}</h3>
+                <h3 className="text-xl font-bold mb-2 text-black">{t('order.mensLarge.title')}</h3>
                 <p className="text-gray-500 mb-2">{t('order.mensLarge.calories')}</p>
                 <p className="text-gray-700 mb-4">{t('order.mensLarge.description')}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-primary">{t('order.mensLarge.price')}</span>
+                  <span className="text-xl font-bold text-black">{t('order.mensLarge.price')}</span>
                   <Button 
                     onClick={() => navigate('/order')}
-                    className="bg-primary hover:bg-primary/90"
+                    className="bg-black hover:bg-black/90 text-white"
                   >
                     {t('order.selectMenu')}
                   </Button>
@@ -131,14 +135,14 @@ const Index = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.mensSmall.title')}</h3>
+                <h3 className="text-xl font-bold mb-2 text-black">{t('order.mensSmall.title')}</h3>
                 <p className="text-gray-500 mb-2">{t('order.mensSmall.calories')}</p>
                 <p className="text-gray-700 mb-4">{t('order.mensSmall.description')}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-primary">{t('order.mensSmall.price')}</span>
+                  <span className="text-xl font-bold text-black">{t('order.mensSmall.price')}</span>
                   <Button 
                     onClick={() => navigate('/order')}
-                    className="bg-primary hover:bg-primary/90"
+                    className="bg-black hover:bg-black/90 text-white"
                   >
                     {t('order.selectMenu')}
                   </Button>
@@ -146,14 +150,14 @@ const Index = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.womensLarge.title')}</h3>
+                <h3 className="text-xl font-bold mb-2 text-black">{t('order.womensLarge.title')}</h3>
                 <p className="text-gray-500 mb-2">{t('order.womensLarge.calories')}</p>
                 <p className="text-gray-700 mb-4">{t('order.womensLarge.description')}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-primary">{t('order.womensLarge.price')}</span>
+                  <span className="text-xl font-bold text-black">{t('order.womensLarge.price')}</span>
                   <Button 
                     onClick={() => navigate('/order')}
-                    className="bg-primary hover:bg-primary/90"
+                    className="bg-black hover:bg-black/90 text-white"
                   >
                     {t('order.selectMenu')}
                   </Button>
@@ -161,14 +165,14 @@ const Index = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-2 text-primary">{t('order.womensSmall.title')}</h3>
+                <h3 className="text-xl font-bold mb-2 text-black">{t('order.womensSmall.title')}</h3>
                 <p className="text-gray-500 mb-2">{t('order.womensSmall.calories')}</p>
                 <p className="text-gray-700 mb-4">{t('order.womensSmall.description')}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-primary">{t('order.womensSmall.price')}</span>
+                  <span className="text-xl font-bold text-black">{t('order.womensSmall.price')}</span>
                   <Button 
                     onClick={() => navigate('/order')}
-                    className="bg-primary hover:bg-primary/90"
+                    className="bg-black hover:bg-black/90 text-white"
                   >
                     {t('order.selectMenu')}
                   </Button>
