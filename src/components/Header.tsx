@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -40,7 +41,7 @@ export default function Header() {
             <img 
               src="/logo.png" 
               alt="MusclEatz Logo" 
-              className="h-14 md:h-16"
+              className="h-16 md:h-20 object-contain" 
             />
           </a>
         </div>
