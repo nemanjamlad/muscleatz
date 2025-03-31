@@ -14,7 +14,7 @@ export default function Footer() {
             <img 
               src="/logo.png" 
               alt="MusclEatz Logo" 
-              className="h-20 mb-4 object-contain" 
+              className="h-16 mb-4" 
             />
             <p className="text-gray-600 mb-4">
               {t('home.aboutText')}

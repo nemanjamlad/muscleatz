@@ -21,7 +21,7 @@ const Index = () => {
               <img 
                 src="/logo.png" 
                 alt="MusclEatz Logo" 
-                className="h-36 md:h-48 mx-auto mb-8 object-contain" 
+                className="h-32 md:h-40 mx-auto mb-8" 
               />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('home.title')}</h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-700">{t('home.subtitle')}</p>
