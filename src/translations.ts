@@ -1,4 +1,3 @@
-
 export type Locale = 'sr' | 'en';
 
 export const translations = {
@@ -105,7 +104,7 @@ export const translations = {
     footer: {
       rights: 'Sva prava zadržana',
       contact: 'Kontakt',
-      address: 'Adresa: Bulevar oslobođenja 123, Beograd',
+      address: 'Adresa: Beograd',
       phone: 'Telefon: 0603187333',
       email: 'Email: muscleatz@gmail.com'
     }
@@ -213,7 +212,7 @@ export const translations = {
     footer: {
       rights: 'All Rights Reserved',
       contact: 'Contact',
-      address: 'Address: 123 Liberation Boulevard, Belgrade',
+      address: 'Address: Belgrade',
       phone: 'Phone: 0603187333',
       email: 'Email: muscleatz@gmail.com'
     }
