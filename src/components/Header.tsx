@@ -2,7 +2,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, FileText } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
@@ -34,7 +34,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b">
+    <header className="sticky top-0 z-50 w-full bg-background border-b shadow-sm">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center font-bold text-xl">
@@ -68,7 +68,11 @@ export default function Header() {
           >
             {t('common.menus')}
           </button>
-          <a href="/jelovnik" className="font-medium hover:text-green-600 transition-colors">
+          <a 
+            href="/jelovnik" 
+            className="flex items-center gap-1 font-medium text-green-600 hover:text-green-700 transition-colors"
+          >
+            <FileText className="h-4 w-4" />
             {t('common.jelovnik')}
           </a>
           <button 
@@ -139,8 +143,9 @@ export default function Header() {
             </button>
             <a 
               href="/jelovnik"
-              className="font-medium hover:text-green-600 transition-colors"
+              className="flex items-center gap-1 font-medium text-green-600 hover:text-green-700 transition-colors"
             >
+              <FileText className="h-4 w-4" />
               {t('common.jelovnik')}
             </a>
           </nav>

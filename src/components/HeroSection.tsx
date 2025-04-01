@@ -8,7 +8,8 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-[80vh] flex items-center bg-hero-pattern bg-cover bg-center">
+    <section className="relative min-h-[80vh] flex items-center bg-cover bg-center" 
+      style={{ backgroundImage: "url('/healthy-food-bg.jpg')" }}>
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
       <div className="container mx-auto px-4 py-16 relative z-10 animate-fade-in">
         <div className="max-w-3xl mx-auto text-center">
@@ -25,14 +26,12 @@ const HeroSection = () => {
               {t('home.orderCta')}
             </Button>
             <Button 
-              onClick={() => {
-                document.getElementById('menus')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => navigate('/jelovnik')}
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white text-lg px-8 py-6"
               size="lg"
             >
-              {t('common.menus')}
+              {t('common.seeMenu')}
             </Button>
           </div>
           
