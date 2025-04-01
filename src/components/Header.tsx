@@ -37,12 +37,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-background border-b">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="MusclEatz Logo" 
-              className="h-14 md:h-16" 
-            />
+          <a href="/" className="flex items-center font-bold text-xl">
+            MusclEatz
           </a>
         </div>
 
@@ -50,40 +46,40 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6">
           <button 
             onClick={() => scrollToSection('hero')}
-            className="font-medium hover:text-primary transition-colors"
+            className="font-medium hover:text-green-600 transition-colors"
           >
             {t('common.home')}
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="font-medium hover:text-primary transition-colors"
+            className="font-medium hover:text-green-600 transition-colors"
           >
             {t('common.about')}
           </button>
           <button 
             onClick={() => scrollToSection('features')}
-            className="font-medium hover:text-primary transition-colors"
+            className="font-medium hover:text-green-600 transition-colors"
           >
             {t('common.features')}
           </button>
           <button 
             onClick={() => scrollToSection('menus')}
-            className="font-medium hover:text-primary transition-colors"
+            className="font-medium hover:text-green-600 transition-colors"
           >
             {t('common.menus')}
           </button>
-          <a href="/jelovnik" className="font-medium hover:text-primary transition-colors">
+          <a href="/jelovnik" className="font-medium hover:text-green-600 transition-colors">
             {t('common.jelovnik')}
           </a>
           <button 
             onClick={toggleLanguage}
-            className="p-2 font-medium hover:text-primary transition-colors"
+            className="p-2 font-medium hover:text-green-600 transition-colors"
           >
             {t('common.language')}
           </button>
           <Button 
             onClick={() => navigate('/order')}
-            className="bg-black hover:bg-black/90 text-white"
+            className="bg-green-600 hover:bg-green-700 text-white"
           >
             {t('common.orderNow')}
           </Button>
@@ -93,13 +89,13 @@ export default function Header() {
         <div className="flex items-center md:hidden space-x-4">
           <button 
             onClick={toggleLanguage}
-            className="p-2 font-medium hover:text-primary transition-colors"
+            className="p-2 font-medium hover:text-green-600 transition-colors"
           >
             {t('common.language')}
           </button>
           <Button 
             onClick={() => navigate('/order')}
-            className="bg-black hover:bg-black/90 text-white"
+            className="bg-green-600 hover:bg-green-700 text-white"
             size="sm"
           >
             {t('common.orderNow')}
@@ -119,31 +115,31 @@ export default function Header() {
           <nav className="flex flex-col space-y-4">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="font-medium hover:text-primary transition-colors"
+              className="font-medium hover:text-green-600 transition-colors"
             >
               {t('common.home')}
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="font-medium hover:text-primary transition-colors"
+              className="font-medium hover:text-green-600 transition-colors"
             >
               {t('common.about')}
             </button>
             <button 
               onClick={() => scrollToSection('features')}
-              className="font-medium hover:text-primary transition-colors"
+              className="font-medium hover:text-green-600 transition-colors"
             >
               {t('common.features')}
             </button>
             <button 
               onClick={() => scrollToSection('menus')}
-              className="font-medium hover:text-primary transition-colors"
+              className="font-medium hover:text-green-600 transition-colors"
             >
               {t('common.menus')}
             </button>
             <a 
               href="/jelovnik"
-              className="font-medium hover:text-primary transition-colors"
+              className="font-medium hover:text-green-600 transition-colors"
             >
               {t('common.jelovnik')}
             </a>
