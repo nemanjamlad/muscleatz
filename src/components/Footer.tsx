@@ -15,14 +15,15 @@ export default function Footer() {
             <p className="text-gray-600 mb-4">
               {t('home.aboutText')}
             </p>
-            <div className="flex mt-4">
+            <div className="flex items-center mt-4">
               <a 
                 href="https://www.instagram.com/muscle.eatz.rs" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-green-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-green-600 transition-colors"
               >
                 <Instagram size={24} />
+                <span className="ml-2 font-medium">Instagram</span>
               </a>
             </div>
           </div>

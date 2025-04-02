@@ -11,6 +11,7 @@ export const translations = {
       menus: 'Meniji',
       jelovnik: 'Jelovnik',
       contact: 'Kontakt',
+      seeMenu: 'Pogledaj jelovnik',
     },
     home: {
       title: 'MusclEatz',
@@ -119,6 +120,7 @@ export const translations = {
       menus: 'Menus',
       jelovnik: 'Menu Card',
       contact: 'Contact',
+      seeMenu: 'See Menu',
     },
     home: {
       title: 'MusclEatz',
