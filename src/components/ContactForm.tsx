@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "emailjs-com";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Form,
   FormControl,
@@ -27,14 +28,15 @@ interface ContactFormProps {
   selectedMenu: string;
 }
 
-// EmailJS constants
+// EmailJS constants - make sure these match your EmailJS account details exactly
 const EMAIL_SERVICE_ID = "service_muscleatz"; 
 const EMAIL_TEMPLATE_ID = "template_order";
-const EMAIL_PUBLIC_KEY = "RpUC5e4OPlYPP6OQO"; // Updated to use public key instead of user ID
+const EMAIL_PUBLIC_KEY = "RpUC5e4OPlYPP6OQO"; // This should match your actual public key
 
 export function ContactForm({ selectedMenu }: ContactFormProps) {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
 
   const form = useForm<FormData>({
     defaultValues: {
@@ -47,21 +49,26 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
+    setFormError(null);
     
     try {
-      // Initialize EmailJS with the public key
+      // Initialize EmailJS with the public key before sending
       emailjs.init(EMAIL_PUBLIC_KEY);
       
       // Prepare template parameters
       const templateParams = {
+        to_name: "MuscleAtz", // Add recipient name
         to_email: "muscleatz@gmail.com",
         from_name: data.name,
         from_email: data.email,
         phone: data.phone,
         address: data.address,
+        message: `Order for: ${selectedMenu}`,
         selected_menu: selectedMenu,
         reply_to: data.email,
       };
+
+      console.log("Sending email with params:", templateParams);
 
       // Send email using EmailJS
       const response = await emailjs.send(
@@ -80,6 +87,7 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
       form.reset();
     } catch (error) {
       console.error("Error sending email:", error);
+      setFormError("Failed to send order. Please check your network connection or try again later.");
       toast({
         title: "Error",
         description: "Failed to send order. Please try again or contact us directly.",
@@ -94,6 +102,12 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6">{t('contact.title')}</h2>
       <p className="mb-4">{t('contact.selectedMenu')}: <strong>{selectedMenu}</strong></p>
+      
+      {formError && (
+        <Alert variant="destructive" className="mb-4">
+          <AlertDescription>{formError}</AlertDescription>
+        </Alert>
+      )}
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
