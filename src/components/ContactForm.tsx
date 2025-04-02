@@ -31,7 +31,7 @@ interface ContactFormProps {
 // EmailJS constants - make sure these match your EmailJS account details exactly
 const EMAIL_SERVICE_ID = "service_muscleatz"; 
 const EMAIL_TEMPLATE_ID = "template_order";
-const EMAIL_PUBLIC_KEY = "RpUC5e4OPlYPP6OQO"; // This should match your actual public key
+const EMAIL_PUBLIC_KEY = "rZmfq6HSeVTWsb9_xGJQ-"; // Updated with the correct public key
 
 export function ContactForm({ selectedMenu }: ContactFormProps) {
   const { t } = useLanguage();
