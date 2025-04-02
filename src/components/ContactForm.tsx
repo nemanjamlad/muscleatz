@@ -28,9 +28,9 @@ interface ContactFormProps {
 }
 
 // EmailJS constants
-const EMAIL_SERVICE_ID = "service_muscleatz"; // You'll need to replace with your actual service ID
-const EMAIL_TEMPLATE_ID = "template_order"; // You'll need to replace with your actual template ID
-const EMAIL_USER_ID = "your_user_id"; // You'll need to replace with your actual user ID
+const EMAIL_SERVICE_ID = "service_muscleatz"; 
+const EMAIL_TEMPLATE_ID = "template_order";
+const EMAIL_PUBLIC_KEY = "RpUC5e4OPlYPP6OQO"; // Updated to use public key instead of user ID
 
 export function ContactForm({ selectedMenu }: ContactFormProps) {
   const { t } = useLanguage();
@@ -49,6 +49,9 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
     setIsSubmitting(true);
     
     try {
+      // Initialize EmailJS with the public key
+      emailjs.init(EMAIL_PUBLIC_KEY);
+      
       // Prepare template parameters
       const templateParams = {
         to_email: "muscleatz@gmail.com",
@@ -64,8 +67,7 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
       const response = await emailjs.send(
         EMAIL_SERVICE_ID,
         EMAIL_TEMPLATE_ID,
-        templateParams,
-        EMAIL_USER_ID
+        templateParams
       );
 
       console.log("Email sent successfully:", response);
