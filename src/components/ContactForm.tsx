@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 import {
   Form,
   FormControl,
@@ -26,6 +27,11 @@ interface ContactFormProps {
   selectedMenu: string;
 }
 
+// EmailJS constants
+const EMAIL_SERVICE_ID = "service_muscleatz"; // You'll need to replace with your actual service ID
+const EMAIL_TEMPLATE_ID = "template_order"; // You'll need to replace with your actual template ID
+const EMAIL_USER_ID = "your_user_id"; // You'll need to replace with your actual user ID
+
 export function ContactForm({ selectedMenu }: ContactFormProps) {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,18 +45,47 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
     },
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        to_email: "muscleatz@gmail.com",
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        address: data.address,
+        selected_menu: selectedMenu,
+        reply_to: data.email,
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
+        templateParams,
+        EMAIL_USER_ID
+      );
+
+      console.log("Email sent successfully:", response);
+      
       toast({
         title: t('contact.success'),
         description: t('contact.orderConfirmed'),
       });
-      setIsSubmitting(false);
+      
       form.reset();
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send order. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
