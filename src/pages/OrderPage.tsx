@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Instagram } from "lucide-react";
 
 const OrderPage = () => {
   const { t } = useLanguage();
@@ -118,6 +119,22 @@ const OrderPage = () => {
 
             <div className="max-w-4xl mx-auto mt-12 text-center">
               <p className="text-lg text-gray-700">{t('order.orderNote')}</p>
+              
+              {/* Added trainer contact information */}
+              <div className="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                <p className="text-lg font-medium text-gray-800">
+                  Za dodatne informacije o treningu javite se iskusnom treneru:
+                </p>
+                <a 
+                  href="https://www.instagram.com/luka_sakovic" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-2 text-primary font-medium hover:text-primary/80 transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                  @luka_sakovic
+                </a>
+              </div>
             </div>
           </div>
         </section>
