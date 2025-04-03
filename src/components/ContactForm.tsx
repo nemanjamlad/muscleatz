@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLanguage } from "@/context/LanguageContext";
@@ -30,7 +29,7 @@ interface ContactFormProps {
 
 // EmailJS constants - make sure these match your EmailJS account details exactly
 const SERVICE_ID = "service_muscleatz"; 
-const TEMPLATE_ID = "template_order";
+const TEMPLATE_ID = "template_1lmpyfl"; // Updated with the correct template ID
 const USER_ID = "DUqRn7rla39uwArF-"; // Public key
 
 export function ContactForm({ selectedMenu }: ContactFormProps) {
