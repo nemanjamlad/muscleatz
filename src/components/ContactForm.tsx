@@ -29,9 +29,9 @@ interface ContactFormProps {
 }
 
 // EmailJS constants - make sure these match your EmailJS account details exactly
-const EMAIL_SERVICE_ID = "service_muscleatz"; 
-const EMAIL_TEMPLATE_ID = "template_order";
-const EMAIL_PUBLIC_KEY = "DUqRn7rla39uwArF-"; // Updated with the newly provided public key
+const SERVICE_ID = "service_muscleatz"; 
+const TEMPLATE_ID = "template_order";
+const USER_ID = "DUqRn7rla39uwArF-"; // Public key
 
 export function ContactForm({ selectedMenu }: ContactFormProps) {
   const { t } = useLanguage();
@@ -52,28 +52,26 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
     setFormError(null);
     
     try {
-      // Initialize EmailJS with the public key before sending
-      emailjs.init(EMAIL_PUBLIC_KEY);
+      // Initialize EmailJS
+      emailjs.init(USER_ID);
       
-      // Prepare template parameters
+      // Prepare template parameters according to the template structure
       const templateParams = {
-        to_name: "MuscleAtz", // Add recipient name
-        to_email: "muscleatz@gmail.com",
         from_name: data.name,
         from_email: data.email,
         phone: data.phone,
         address: data.address,
-        message: `Order for: ${selectedMenu}`,
         selected_menu: selectedMenu,
+        message: `Order for: ${selectedMenu}`,
         reply_to: data.email,
       };
 
       console.log("Sending email with params:", templateParams);
 
-      // Send email using EmailJS
+      // Send email using EmailJS with your service ID and template ID
       const response = await emailjs.send(
-        EMAIL_SERVICE_ID,
-        EMAIL_TEMPLATE_ID,
+        SERVICE_ID,
+        TEMPLATE_ID,
         templateParams
       );
 
@@ -85,9 +83,16 @@ export function ContactForm({ selectedMenu }: ContactFormProps) {
       });
       
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending email:", error);
-      setFormError("Failed to send order. Please check your network connection or try again later.");
+      
+      // More detailed error message based on the error response
+      const errorMessage = error.text 
+        ? `Failed to send order: ${error.text}` 
+        : "Failed to send order. Please try again or contact us directly.";
+      
+      setFormError(errorMessage);
+      
       toast({
         title: "Error",
         description: "Failed to send order. Please try again or contact us directly.",
