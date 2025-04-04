@@ -126,13 +126,13 @@ const OrderPage = () => {
                   Za dodatne informacije o treningu javite se iskusnom treneru:
                 </p>
                 <a 
-                  href="https://www.instagram.com/muscle.eatz.rs" 
+                  href="https://www.instagram.com/luka_sakovic" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-2 text-primary font-medium hover:text-primary/80 transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
-                  @muscle.eatz.rs
+                  @luka_sakovic
                 </a>
               </div>
             </div>

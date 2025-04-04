@@ -17,13 +17,13 @@ export default function Footer() {
             </p>
             <div className="flex items-center mt-4">
               <a 
-                href="https://www.instagram.com/luka_sakovic" 
+                href="https://www.instagram.com/muscle.eatz.rs" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 hover:text-green-600 transition-colors"
               >
                 <Instagram size={24} />
-                <span className="ml-2 font-medium">@luka_sakovic</span>
+                <span className="ml-2 font-medium">@muscle.eatz.rs</span>
               </a>
             </div>
           </div>
