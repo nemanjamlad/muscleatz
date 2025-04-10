@@ -2,14 +2,23 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Instagram } from "lucide-react";
+import { useEffect } from "react";
 
 const OrderPage = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if a menu was pre-selected
+    if (location.state?.selectedMenu) {
+      handleSelectMenu(location.state.selectedMenu);
+    }
+  }, [location.state]);
 
   const handleSelectMenu = (menuName: string) => {
     navigate("/contact", { state: { selectedMenu: menuName } });
@@ -121,21 +130,49 @@ const OrderPage = () => {
             <div className="mt-12 bg-white p-6 rounded-lg border border-gray-200 max-w-4xl mx-auto">
               <h3 className="text-xl font-bold mb-4 text-center">Dnevne cene menija</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center p-3 bg-gray-50 rounded">
+                <div className="text-center p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
                   <p className="font-medium">Mali meni za žene</p>
-                  <p className="font-bold text-primary mt-1">2200 RSD</p>
+                  <p className="font-bold text-primary mt-1 mb-2">2200 RSD</p>
+                  <Button 
+                    onClick={() => handleSelectMenu("Mali meni za žene (dnevna cena)")}
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    size="sm"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
                 </div>
-                <div className="text-center p-3 bg-gray-50 rounded">
+                <div className="text-center p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
                   <p className="font-medium">Veliki meni za žene</p>
-                  <p className="font-bold text-primary mt-1">2400 RSD</p>
+                  <p className="font-bold text-primary mt-1 mb-2">2400 RSD</p>
+                  <Button 
+                    onClick={() => handleSelectMenu("Veliki meni za žene (dnevna cena)")}
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    size="sm"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
                 </div>
-                <div className="text-center p-3 bg-gray-50 rounded">
+                <div className="text-center p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
                   <p className="font-medium">Mali meni za muškarce</p>
-                  <p className="font-bold text-primary mt-1">2600 RSD</p>
+                  <p className="font-bold text-primary mt-1 mb-2">2600 RSD</p>
+                  <Button 
+                    onClick={() => handleSelectMenu("Mali meni za muškarce (dnevna cena)")}
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    size="sm"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
                 </div>
-                <div className="text-center p-3 bg-gray-50 rounded">
+                <div className="text-center p-3 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
                   <p className="font-medium">Veliki meni za muškarce</p>
-                  <p className="font-bold text-primary mt-1">3000 RSD</p>
+                  <p className="font-bold text-primary mt-1 mb-2">3000 RSD</p>
+                  <Button 
+                    onClick={() => handleSelectMenu("Veliki meni za muškarce (dnevna cena)")}
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    size="sm"
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
                 </div>
               </div>
             </div>
