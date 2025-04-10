@@ -81,6 +81,32 @@ const MenusSection = () => {
               </Button>
             </div>
           </div>
+          
+          {/* Premium Personalized Plan */}
+          <div className="menu-highlight bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-primary/30 transition-all duration-300 relative overflow-hidden col-span-1 md:col-span-2">
+            <div className="absolute top-0 right-0 bg-amber-500 text-white py-1 px-3 text-sm font-semibold">Premium</div>
+            <h3 className="text-2xl font-bold mb-2 text-gray-900">Premium Personalizovani Plan Ishrane</h3>
+            <p className="text-gray-700 mb-4">
+              Prilagođen tvojim ciljevima i potrebama, ovaj plan ishrane će biti dizajniran da odgovara tvojoj specifičnoj aktivnosti, potrebama za kalorijama i makronutrijentima. Kao tvoj lični trener, sastaviću ti plan koji će obuhvatiti optimalnu količinu proteina, ugljenih hidrata i masti za postizanje ciljeva, bilo da je to izgradnja mišića, mršavljenje ili održavanje zdrave telesne mase.
+            </p>
+            <div className="bg-gray-50 p-4 rounded-md mb-4">
+              <h4 className="font-semibold mb-2">Šta uključuje:</h4>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Detaljan plan ishrane sa tačno definisanim kalorijskim unosom</li>
+                <li>Prilagođeni obroci za tvoj dnevni režim i ciljeve</li>
+                <li>Kontinuirana podrška i prilagođavanje plana prema napretku</li>
+              </ul>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-2xl font-bold text-primary">20000 RSD</span>
+              <Button 
+                onClick={() => handleSelectDailyMenu("Premium Personalizovani Plan Ishrane")}
+                className="bg-primary hover:bg-primary/90 text-white"
+              >
+                {t('order.selectMenu')}
+              </Button>
+            </div>
+          </div>
         </div>
         
         {/* Daily menu prices section */}

@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { useNavigate, useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Instagram } from "lucide-react";
+import { Instagram, FileText } from "lucide-react";
 import { useEffect } from "react";
 
 const OrderPage = () => {
@@ -119,6 +119,38 @@ const OrderPage = () => {
                   <Button 
                     className="w-full bg-primary hover:bg-primary/90"
                     onClick={() => handleSelectMenu(t('order.womensSmall.title'))}
+                  >
+                    {t('order.selectMenu')}
+                  </Button>
+                </CardFooter>
+              </Card>
+              
+              {/* Premium Personalized Plan */}
+              <Card className="shadow-lg border-2 hover:border-primary transition-colors md:col-span-2 relative overflow-hidden">
+                <div className="absolute top-2 right-2 bg-amber-500 text-white py-1 px-3 text-sm font-semibold rounded-md">Premium</div>
+                <CardHeader>
+                  <CardTitle className="text-xl">Premium Personalizovani Plan Ishrane</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">
+                    Prilagođen tvojim ciljevima i potrebama, ovaj plan ishrane će biti dizajniran da odgovara tvojoj specifičnoj aktivnosti, potrebama za kalorijama i makronutrijentima. Kao tvoj lični trener, sastaviću ti plan koji će obuhvatiti optimalnu količinu proteina, ugljenih hidrata i masti za postizanje ciljeva, bilo da je to izgradnja mišića, mršavljenje ili održavanje zdrave telesne mase.
+                  </p>
+                  
+                  <div className="bg-gray-50 p-4 rounded-md mb-4">
+                    <h4 className="font-semibold mb-2">Šta uključuje:</h4>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>Detaljan plan ishrane sa tačno definisanim kalorijskim unosom</li>
+                      <li>Prilagođeni obroci za tvoj dnevni režim i ciljeve</li>
+                      <li>Kontinuirana podrška i prilagođavanje plana prema napretku</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="text-2xl font-bold text-primary">20000 RSD</div>
+                </CardContent>
+                <CardFooter>
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90"
+                    onClick={() => handleSelectMenu("Premium Personalizovani Plan Ishrane")}
                   >
                     {t('order.selectMenu')}
                   </Button>
