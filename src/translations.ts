@@ -57,26 +57,26 @@ export const translations = {
       mensLarge: {
         title: 'Veliki meni za muškarce',
         calories: '2500 kcal',
-        price: '13000 RSD',
-        description: 'Idealan za muškarce koji treniraju i žele da izgrade mišićnu masu.'
+        price: '13500 RSD',
+        description: 'Idealan za muškarce koji treniraju i žele da izgrade mišićnu masu. Dnevna cena: 3000 RSD'
       },
       mensSmall: {
         title: 'Mali meni za muškarce',
         calories: '2000 kcal',
-        price: '11500 RSD',
-        description: 'Savršen za muškarce koji žele da održe težinu i energiju.'
+        price: '12000 RSD',
+        description: 'Savršen za muškarce koji žele da održe težinu i energiju. Dnevna cena: 2600 RSD'
       },
       womensLarge: {
         title: 'Veliki meni za žene',
         calories: '1800 kcal',
-        price: '10500 RSD',
-        description: 'Kreiran za žene koje treniraju i žele da održe toniranu figuru.'
+        price: '11000 RSD',
+        description: 'Kreiran za žene koje treniraju i žele da održe toniranu figuru. Dnevna cena: 2400 RSD'
       },
       womensSmall: {
         title: 'Mali meni za žene',
         calories: '1300 kcal',
-        price: '9500 RSD',
-        description: 'Idealan za žene koje žele da smanje telesnu težinu.'
+        price: '10000 RSD',
+        description: 'Idealan za žene koje žele da smanje telesnu težinu. Dnevna cena: 2200 RSD'
       },
       selectMenu: 'Izaberite meni',
       orderNote: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
@@ -88,6 +88,7 @@ export const translations = {
       uploadButton: 'Otpremite jelovnik',
       clickToEnlarge: 'Kliknite na sliku da je uvećate',
       noMenu: 'Trenutno nema dostupnog jelovnika',
+      weeklyMenu: 'Nedeljni jelovnik'
     },
     contact: {
       title: 'Kontakt informacije',
@@ -166,26 +167,26 @@ export const translations = {
       mensLarge: {
         title: 'Large Menu for Men',
         calories: '2500 kcal',
-        price: '13000 RSD',
-        description: 'Ideal for men who train and want to build muscle mass.'
+        price: '13500 RSD',
+        description: 'Ideal for men who train and want to build muscle mass. Daily price: 3000 RSD'
       },
       mensSmall: {
         title: 'Small Menu for Men',
         calories: '2000 kcal',
-        price: '11500 RSD',
-        description: 'Perfect for men who want to maintain weight and energy.'
+        price: '12000 RSD',
+        description: 'Perfect for men who want to maintain weight and energy. Daily price: 2600 RSD'
       },
       womensLarge: {
         title: 'Large Menu for Women',
         calories: '1800 kcal',
-        price: '10500 RSD',
-        description: 'Created for women who train and want to maintain a toned figure.'
+        price: '11000 RSD',
+        description: 'Created for women who train and want to maintain a toned figure. Daily price: 2400 RSD'
       },
       womensSmall: {
         title: 'Small Menu for Women',
         calories: '1300 kcal',
-        price: '9500 RSD',
-        description: 'Ideal for women who want to reduce body weight.'
+        price: '10000 RSD',
+        description: 'Ideal for women who want to reduce body weight. Daily price: 2200 RSD'
       },
       selectMenu: 'Select Menu',
       orderNote: 'We accept orders from Monday to Saturday for the following week.',
@@ -197,6 +198,7 @@ export const translations = {
       uploadButton: 'Upload Menu',
       clickToEnlarge: 'Click on the image to enlarge',
       noMenu: 'No menu currently available',
+      weeklyMenu: 'Weekly Menu'
     },
     contact: {
       title: 'Contact Information',
