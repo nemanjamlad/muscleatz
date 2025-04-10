@@ -79,6 +79,29 @@ const MenusSection = () => {
           </div>
         </div>
         
+        {/* Daily menu prices section */}
+        <div className="mt-16 bg-gray-50 p-8 rounded-lg max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Dnevne cene menija</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+              <h4 className="font-bold text-lg mb-2">Mali meni za žene</h4>
+              <p className="text-primary font-semibold text-xl">2200 RSD</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+              <h4 className="font-bold text-lg mb-2">Veliki meni za žene</h4>
+              <p className="text-primary font-semibold text-xl">2400 RSD</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+              <h4 className="font-bold text-lg mb-2">Mali meni za muškarce</h4>
+              <p className="text-primary font-semibold text-xl">2600 RSD</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+              <h4 className="font-bold text-lg mb-2">Veliki meni za muškarce</h4>
+              <p className="text-primary font-semibold text-xl">3000 RSD</p>
+            </div>
+          </div>
+        </div>
+        
         <div className="mt-12 text-center">
           <Button 
             onClick={() => navigate('/jelovnik')}

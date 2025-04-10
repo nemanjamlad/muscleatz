@@ -117,6 +117,29 @@ const OrderPage = () => {
               </Card>
             </div>
 
+            {/* Daily menu prices section */}
+            <div className="mt-12 bg-white p-6 rounded-lg border border-gray-200 max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold mb-4 text-center">Dnevne cene menija</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="text-center p-3 bg-gray-50 rounded">
+                  <p className="font-medium">Mali meni za žene</p>
+                  <p className="font-bold text-primary mt-1">2200 RSD</p>
+                </div>
+                <div className="text-center p-3 bg-gray-50 rounded">
+                  <p className="font-medium">Veliki meni za žene</p>
+                  <p className="font-bold text-primary mt-1">2400 RSD</p>
+                </div>
+                <div className="text-center p-3 bg-gray-50 rounded">
+                  <p className="font-medium">Mali meni za muškarce</p>
+                  <p className="font-bold text-primary mt-1">2600 RSD</p>
+                </div>
+                <div className="text-center p-3 bg-gray-50 rounded">
+                  <p className="font-medium">Veliki meni za muškarce</p>
+                  <p className="font-bold text-primary mt-1">3000 RSD</p>
+                </div>
+              </div>
+            </div>
+
             <div className="max-w-4xl mx-auto mt-12 text-center">
               <p className="text-lg text-gray-700">{t('order.orderNote')}</p>
               
