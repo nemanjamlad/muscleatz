@@ -21,7 +21,7 @@ const JelovnikPage = () => {
             <div className="flex flex-col items-center">
               <div className="shadow-lg rounded-lg overflow-hidden border border-gray-200">
                 <img 
-                  src="/lovable-uploads/0ebbb844-6dfb-46e5-b159-2c03c6fce149.png" 
+                  src="/lovable-uploads/0e3683f6-1aa8-4990-8024-e8270c078d88.png" 
                   alt="Nedeljni jelovnik" 
                   className="w-full h-auto" 
                 />
