@@ -16,7 +16,7 @@ export const translations = {
     home: {
       title: 'MusclEatz',
       subtitle: 'Zdrava hrana za zdrav život',
-      heroText: '7 dana nedeljno donosimo obroke na vašu adresu',
+      heroText: '5 dana nedeljno donosimo obroke na vašu adresu',
       orderCta: 'Poručite odmah',
       aboutUs: 'O nama',
       aboutText: 'MusclEatz je premium servis za dostavu zdrave, sveže pripremljene hrane koja je kreirana da ispuni sve vaše nutritivne potrebe. Idealno rešenje za sportiste koji žele da ostvare maksimalne rezultate.',
@@ -28,7 +28,7 @@ export const translations = {
         },
         delivery: {
           title: 'Dostava na adresu',
-          description: '7 dana nedeljno dostavljamo hranu na vašu adresu od 7 do 10 ujutru.'
+          description: '5 dana nedeljno dostavljamo hranu na vašu adresu od 7 do 10 ujutru.'
         },
         nutrition: {
           title: 'Nutritivno izbalansirano',
@@ -48,7 +48,7 @@ export const translations = {
       orderSteps: [
         'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
         'Nakon popunjenog upitnika naš tim će vas kontaktirati u najkraćem mogućem roku.',
-        'Vaše obroke možete očekivati na adresi svakog dana od 7 do 10 ujutru.'
+        'Vaše obroke možete očekivati na adresi svakog dana od ponedeljka do petka od 7 do 10 ujutru.'
       ]
     },
     order: {
@@ -126,7 +126,7 @@ export const translations = {
     home: {
       title: 'MusclEatz',
       subtitle: 'Healthy Food for Healthy Life',
-      heroText: 'We deliver meals to your address 7 days a week',
+      heroText: 'We deliver meals to your address 5 days a week',
       orderCta: 'Order Now',
       aboutUs: 'About Us',
       aboutText: 'MusclEatz is a premium meal delivery service with fresh, healthy food created to fulfill all your nutritional needs. Perfect solution for athletes who want to achieve maximum results.',
@@ -138,7 +138,7 @@ export const translations = {
         },
         delivery: {
           title: 'Home Delivery',
-          description: 'We deliver food to your address 7 days a week between 7 and 10 AM.'
+          description: 'We deliver food to your address 5 days a week between 7 and 10 AM.'
         },
         nutrition: {
           title: 'Nutritionally Balanced',
@@ -158,7 +158,7 @@ export const translations = {
       orderSteps: [
         'We accept orders from Monday to Saturday for the following week.',
         'After submitting the form, our team will contact you as soon as possible.',
-        'You can expect your meals at your address every day between 7 and 10 AM.'
+        'You can expect your meals at your address every day from Monday to Friday between 7 and 10 AM.'
       ]
     },
     order: {
