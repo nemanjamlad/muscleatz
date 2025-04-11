@@ -1,7 +1,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { Menu, FileText } from "lucide-react";
 import { useState } from "react";
 
@@ -37,9 +37,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-background border-b shadow-sm">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center font-bold text-xl">
+          <Link to="/" className="flex items-center font-bold text-xl">
             MusclEatz
-          </a>
+          </Link>
         </div>
 
         {/* Desktop navigation */}
@@ -68,13 +68,13 @@ export default function Header() {
           >
             {t('common.menus')}
           </button>
-          <a 
-            href="/jelovnik" 
+          <Link 
+            to="/jelovnik" 
             className="flex items-center gap-1 font-medium text-green-600 hover:text-green-700 transition-colors"
           >
             <FileText className="h-4 w-4" />
             {t('common.jelovnik')}
-          </a>
+          </Link>
           <button 
             onClick={toggleLanguage}
             className="p-2 font-medium hover:text-green-600 transition-colors"
@@ -141,13 +141,13 @@ export default function Header() {
             >
               {t('common.menus')}
             </button>
-            <a 
-              href="/jelovnik"
+            <Link 
+              to="/jelovnik"
               className="flex items-center gap-1 font-medium text-green-600 hover:text-green-700 transition-colors"
             >
               <FileText className="h-4 w-4" />
               {t('common.jelovnik')}
-            </a>
+            </Link>
           </nav>
         </div>
       )}
