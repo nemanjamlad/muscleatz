@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -82,7 +81,6 @@ const MenusSection = () => {
             </div>
           </div>
           
-          {/* Premium Personalized Plan */}
           <div className="menu-highlight bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-primary/30 transition-all duration-300 relative overflow-hidden col-span-1 md:col-span-2">
             <div className="absolute top-0 right-0 bg-amber-500 text-white py-1 px-3 text-sm font-semibold">Premium</div>
             <h3 className="text-2xl font-bold mb-2 text-gray-900">Premium Personalizovani Plan Ishrane</h3>
@@ -109,7 +107,6 @@ const MenusSection = () => {
           </div>
         </div>
         
-        {/* Daily menu prices section */}
         <div className="mt-16 bg-gray-50 p-8 rounded-lg max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Dnevne cene menija</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -157,6 +154,10 @@ const MenusSection = () => {
                 {t('order.selectMenu')}
               </Button>
             </div>
+          </div>
+          <div className="mt-4 text-center text-gray-700">
+            <p>{t('order.orderNote')}</p>
+            <p className="mt-2">{t('order.orderDailyNote')}</p>
           </div>
         </div>
         

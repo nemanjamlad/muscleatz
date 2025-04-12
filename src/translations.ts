@@ -44,9 +44,11 @@ export const translations = {
         }
       },
       orderInfo: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
+      orderDailyInfo: 'Porudžbine za pojedinačne dane četvrtak i petak se primaju do srede, a za ponedeljak, utorak i sredu do subote (samo za dnevni meni).',
       orderInstructions: 'Uputstva za poručivanje:',
       orderSteps: [
         'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
+        'Porudžbine za pojedinačne dane četvrtak i petak se primaju do srede, a za ponedeljak, utorak i sredu do subote (samo za dnevni meni).',
         'Nakon popunjenog upitnika naš tim će vas kontaktirati u najkraćem mogućem roku.',
         'Vaše obroke možete očekivati na adresi svakog dana od ponedeljka do petka od 7 do 10 ujutru.'
       ]
@@ -80,6 +82,7 @@ export const translations = {
       },
       selectMenu: 'Izaberite meni',
       orderNote: 'Primamo porudžbine od ponedeljka do subote za sledeću nedelju.',
+      orderDailyNote: 'Porudžbine za pojedinačne dane četvrtak i petak se primaju do srede, a za ponedeljak, utorak i sredu do subote (samo za dnevni meni).',
       deliveryTime: 'Hrana stiže na vašu adresu od 7 do 10 ujutru.'
     },
     jelovnik: {
@@ -154,9 +157,11 @@ export const translations = {
         }
       },
       orderInfo: 'We accept orders from Monday to Saturday for the following week.',
+      orderDailyInfo: 'Orders for individual days Thursday and Friday are accepted until Wednesday, and for Monday, Tuesday and Wednesday until Saturday (only for daily menu).',
       orderInstructions: 'Order Instructions:',
       orderSteps: [
         'We accept orders from Monday to Saturday for the following week.',
+        'Orders for individual days Thursday and Friday are accepted until Wednesday, and for Monday, Tuesday and Wednesday until Saturday (only for daily menu).',
         'After submitting the form, our team will contact you as soon as possible.',
         'You can expect your meals at your address every day from Monday to Friday between 7 and 10 AM.'
       ]
@@ -190,6 +195,7 @@ export const translations = {
       },
       selectMenu: 'Select Menu',
       orderNote: 'We accept orders from Monday to Saturday for the following week.',
+      orderDailyNote: 'Orders for individual days Thursday and Friday are accepted until Wednesday, and for Monday, Tuesday and Wednesday until Saturday (only for daily menu).',
       deliveryTime: 'Food is delivered to your address between 7 and 10 AM.'
     },
     jelovnik: {

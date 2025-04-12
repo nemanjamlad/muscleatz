@@ -36,6 +36,7 @@ const OrderPage = () => {
               <p className="text-xl text-gray-700">{t('order.subtitle')}</p>
             </div>
 
+            {/* Menu cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Men's Large Menu */}
               <Card className="shadow-lg border-2 hover:border-primary transition-colors">
@@ -211,6 +212,7 @@ const OrderPage = () => {
 
             <div className="max-w-4xl mx-auto mt-12 text-center">
               <p className="text-lg text-gray-700">{t('order.orderNote')}</p>
+              <p className="text-lg text-gray-700 mt-2">{t('order.orderDailyNote')}</p>
               
               {/* Added trainer contact information */}
               <div className="mt-8 p-4 bg-amber-50 rounded-lg border border-amber-200">
